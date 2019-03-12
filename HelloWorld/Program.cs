@@ -12,6 +12,8 @@ namespace HelloWorld
         {
             //HelloWorld();
             //stringInterpol();
+            //Equality();
+            //Relational();
 
 
         }
@@ -36,5 +38,30 @@ namespace HelloWorld
             Console.WriteLine(response);
             Console.ReadKey();
         }
+
+        public static void Equality()
+        {
+            //equality operators return booleans
+            Console.WriteLine(1 == 1.0); //true
+            Console.WriteLine(2 != 2.1); //true
+        }
+
+        public static void Relational()
+        {
+           //relational return bool
+            Console.WriteLine(1 > 0); //true
+            Console.WriteLine(2 < 3); //true
+            Console.WriteLine(3 >= 2);//true
+            Console.WriteLine(4 <= 5);//true
+            Console.WriteLine(4 >= 5); //false
+            Console.WriteLine(3 <= 2); //false
+            // is type compatibility
+            // as type conversion
+            // && And
+            Console.WriteLine(1 < 0 || -2 > 0);
+            Console.WriteLine(1 != 0 && 2 > 0);
+            // || OR
+        }
+
     }
 }
