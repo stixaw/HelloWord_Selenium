@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/HelloWorld/v15/Server/sqlite3/db.lock
+/HelloWorld/bin/Debug
+/HelloWorld/obj/Debug
+/UnitTestProject

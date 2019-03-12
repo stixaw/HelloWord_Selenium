@@ -51,8 +51,12 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Quiz.cs" />
-    <Compile Include="Section6-IntegerOperators.cs" />
+    <Compile Include="Section6.cs" />
     <Compile Include="UnitTest1.cs" />
+    <Compile Include="FloatingPoint.cs" />
+    <Compile Include="Decimals.cs" />
+    <Compile Include="Sec6Quiz.cs" />
+    <Compile Include="IfStatements.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
