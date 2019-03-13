@@ -5,4 +5,5 @@
 /.vs/HelloWorld/v15/Server/sqlite3/db.lock
 /HelloWorld/bin/Debug
 /HelloWorld/obj/Debug
-/UnitTestProject
+/UnitTestProject/bin/Debug
+/UnitTestProject/obj/Debug
