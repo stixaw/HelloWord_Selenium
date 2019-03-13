@@ -4,6 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace UnitTestProject
 {
     [TestClass]
+    [TestCategory("IfStatments")]
     public class IfStatements
     {
         int num1;

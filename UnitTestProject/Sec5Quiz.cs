@@ -4,7 +4,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace UnitTestProject
 {
     [TestClass]
-    public class Sec6Quiz
+    [TestCategory("Sec5Quiz")]
+    public class Sec5Quiz
     {
         double celsius;
         double fahrent;

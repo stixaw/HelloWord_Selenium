@@ -4,6 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace UnitTestProject
 {
     [TestClass]
+    [TestCategory("FloatingPoint")]
     public class FloatingPoint
     {
         double num1;

@@ -4,6 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace UnitTestProject
 {
     [TestClass]
+    [TestCategory("Decimals")]
     public class Decimals
     {
         decimal num1;

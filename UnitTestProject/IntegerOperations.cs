@@ -3,7 +3,7 @@
 namespace UnitTestProject
 {
     [TestClass]
-    [TestCategory("Section6")]
+    [TestCategory("Section5")]
     public class IntegerOperations
     {
         int num1;
