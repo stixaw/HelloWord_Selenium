@@ -14,49 +14,8 @@ namespace HelloWorld
             //stringInterpol();
             //Equality();
             //Relational();
-            //IfStatement();
-            //IfElseStatment();
-            IsItLeapYear();
 
-        }
 
-        private static void IsItLeapYear()
-        {
-            bool leap = false;
-
-            Console.WriteLine("What year do you want to test?");
-            int year = Convert.ToInt32(Console.ReadLine());
-
-            if (year % 4 == 0)
-            {
-                Console.WriteLine(year % 4 == 0);
-                if (year % 100 != 0 || year % 400 == 0)
-                {
-                    leap = true;
-                }
-            }
-
-            Console.WriteLine("Is year {0} a leap year: {1}", year, leap);
-
-        }
-
-        private static void IfElseStatment()
-        {
-            int num1 = 22;
-            int num2 = 3 * 4;
-
-            if (num1 >= num2)
-            {
-                Console.WriteLine("{0} >= {1} = {2}", num1, num2, true);
-            }
-            else if (num1 <= num2)
-            {
-                Console.WriteLine("{0} <= {1} = {2}", num1, num2, true);
-            }
-            else
-            {
-                Console.WriteLine("We got no idea");
-            }
         }
 
         public static void HelloWorld()
@@ -103,20 +62,6 @@ namespace HelloWorld
             Console.WriteLine(1 != 0 && 2 > 0);
             // || OR
         }
-
-        public static void IfStatement()
-        {
-            var num1 = 18;
-            var num2 = 4;
-
-            if(num1 == num2)
-            {
-                Console.WriteLine(true);
-            }
-            Console.WriteLine(false);
-        }
-
-
 
     }
 }
