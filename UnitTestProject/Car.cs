@@ -11,12 +11,13 @@ namespace UnitTestProject
         // private variables
         int numberOfDoors;
 
-        //Constructor - factory that builds our objects
-
         //Gets and Sets Accessors (define access to our variables)
         public string Make { get; set; }
         public string Model { get; set; }
         public string Color { get; set; }
+        public decimal Cost { get; set; }
+        public string OwnerName { get; set; }
+
         public int NumberOfDoors
         {
             get { return numberOfDoors; }
@@ -33,7 +34,49 @@ namespace UnitTestProject
             }
         }
 
-        //Methods actions that the object can take
+        //Constructor - factory that builds our objects
+        public Car(string make, string model, string color)
+        {
+            Make = make;
+            Model = model;
+            Color = color.ToLower();
 
+        }
+
+        //Methods actions that the object can take
+        public void AddCarDoors(int doors)
+        {
+            NumberOfDoors = doors;
+        }
+
+        public void AddCarCost(decimal cost)
+        {
+            Cost = cost;
+        }
+
+        public void AddOwnerName(string _owner)
+        {
+            OwnerName = _owner;
+        }
+
+        public void ChangeColor(string _color)
+        {
+            Color = _color.ToLower();
+        }
+
+        public void Accelerate()
+        {
+            Console.WriteLine("I am speeding!!!");
+        }
+
+        public bool IsFamilyCar()
+        {
+            if(NumberOfDoors >= 4)
+            {
+                return true;
+            }
+            else { return false; }
+            
+        }
     }
 }
