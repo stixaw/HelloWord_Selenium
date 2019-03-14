@@ -10,13 +10,7 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            //HelloWorld();
-            //stringInterpol();
-            //Equality();
-            //Relational();
-            //IfStatement();
-            //IfElseStatment();
-            IsItLeapYear();
+
 
         }
 
