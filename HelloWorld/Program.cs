@@ -77,7 +77,7 @@ namespace HelloWorld
             Console.ReadKey();
         }
 
-        public static void stringInterpol()
+        public static void StringInterpol()
         {
             //string interpolation
             Console.WriteLine("what is your name");
