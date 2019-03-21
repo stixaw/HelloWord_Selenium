@@ -32,5 +32,31 @@ namespace UnitTestProject
             Assert.AreEqual(car1.NumberOfDoors, 4);
         }
 
+		[TestMethod]
+		public void Car_Accelerate_Success()
+		{
+
+			//Act
+			var result = car1.Accelerate();
+
+
+			//Assert
+			Assert.IsNotNull(result);
+		}
+
+		[TestMethod]
+		public void Car_IsFamilyCar_True()
+		{
+			//Arrrange
+			car1.AddCarDoors(5);
+
+			//Act
+			bool result = car1.IsFamilyCar();
+
+
+			//Assert
+			Assert.IsTrue(result == true);
+		}
+
     }
 }

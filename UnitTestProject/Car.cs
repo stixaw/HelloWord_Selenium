@@ -23,7 +23,7 @@ namespace UnitTestProject
             get { return numberOfDoors; }
             set
             {
-                if (value <= 4)
+                if (value <= 5)
                 {
                     numberOfDoors = value;
                 }
@@ -64,9 +64,10 @@ namespace UnitTestProject
             Color = _color.ToLower();
         }
 
-        public void Accelerate()
+        public string Accelerate()
         {
-            Console.WriteLine("I am speeding!!!");
+           string result = "I am speeding!!!";
+			return result;
         }
 
         public bool IsFamilyCar()
