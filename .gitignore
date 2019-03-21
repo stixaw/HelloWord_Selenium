@@ -6,8 +6,5 @@
 /HelloWorld/obj/Debug
 /UnitTestProject/bin/Debug
 /UnitTestProject/obj/Debug
-/.vs/HelloWorld/v15/Server/sqlite3/db.lock
-/.vs/HelloWorld/v15/Server/sqlite3/storage.ide-shm
-/.vs/HelloWorld/v15/Server/sqlite3/storage.ide-wal
-/.vs/HelloWorld/v15/Server/sqlite3/storage.ide
-
+/.vs/HelloWorld/v15/Server/sqlite3
+/.vs/HelloWorld/v15/.suo
