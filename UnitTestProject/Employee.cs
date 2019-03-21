@@ -8,7 +8,7 @@ namespace UnitTestProject
 {
     class Employee
     {
-        public int EmployeeNumber { get; set; }
+        public int EmployeeId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime DateOfHire { get; set; }
@@ -16,15 +16,20 @@ namespace UnitTestProject
         public string Department { get; set; }
         public double Salary { get; set; }
 
-        int employeeNum = 0;
+		//Contructors
+		public Employee(int id)
+		{
+			EmployeeId = id;
+			DateOfHire = DateTime.Now;
+		}
 
-        public Employee(string firstName, string lastName)
+        public Employee(string firstName, string lastName, int id)
         {
             
             FirstName = firstName;
             LastName = lastName;
             DateOfHire = DateTime.Now;
-            EmployeeNumber = employeeNum += 1;
+			EmployeeId = id;
 
             
         }

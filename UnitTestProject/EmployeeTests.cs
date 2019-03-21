@@ -6,7 +6,7 @@ namespace UnitTestProject
     [TestClass]
     public class EmployeeTests
     {
-        Employee emp1 = new Employee("John", "Smoth");
+        Employee emp1 = new Employee("John", "Smoth", 2);
 
         [TestMethod]
         public void Employee_GetName_Successful()
@@ -31,15 +31,28 @@ namespace UnitTestProject
         }
 
         [TestMethod]
-        public void Employee_GetEmployeeNumber_1()
+        public void Employee_GetEmployeeNumber_Match()
         {
 
             //Act
-            int result = emp1.EmployeeNumber;
+            int result = emp1.EmployeeId;
             Console.WriteLine(result);
 
             //Assert
-            Assert.AreEqual(result, 1);
+            Assert.AreEqual(result, 2);
         }
+
+		[TestMethod]
+		public void Employee_GetDateOfHire_NotNull()
+		{
+
+			//Act
+			var result = emp1.DateOfHire;
+			Console.WriteLine(result);
+
+
+			//Assert
+			Assert.IsNotNull(result);
+		}
     }
 }
