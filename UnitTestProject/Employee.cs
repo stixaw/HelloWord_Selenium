@@ -8,12 +8,13 @@ namespace UnitTestProject
 {
     class Employee
     {
+
         public int EmployeeId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime DateOfHire { get; set; }
-        public string JobDescription { get; set; }
-        public string Department { get; set; }
+		public string JobTitle { get; set; }
+        public string Location { get; set; }
         public double Salary { get; set; }
 
 		//Contructors
@@ -23,14 +24,14 @@ namespace UnitTestProject
 			DateOfHire = DateTime.Now;
 		}
 
-        public Employee(string firstName, string lastName, int id)
+        public Employee(string firstName, string lastName, int id, string jobTitle)
         {
             
             FirstName = firstName;
             LastName = lastName;
             DateOfHire = DateTime.Now;
 			EmployeeId = id;
-
+			JobTitle = jobTitle;
             
         }
 
@@ -50,19 +51,45 @@ namespace UnitTestProject
             return result;
         }
 
-        public void AddJobDescription(string jobDescription)
-        {
-            JobDescription = jobDescription;
-        }
-
         public void AddSalary(double _salary)
         {
             Salary = _salary;
         }
 
-        public void AddDepartment(string department)
-        {
-            Department = department;
-        }
+		public string GetLocation(string jobTitle)
+		{
+			string location;
+
+			switch (jobTitle)
+			{
+				case "Manager":
+					location = "Springfield";
+					break;
+				case "CSuite":
+					location = "NYC";
+					break;
+				case "Engineer":
+					location = "Denver";
+					break;
+				default:
+					location = "Salt Lake City";
+					break;
+			}
+
+			return location;
+		}
+
+		public void AddLocation(Employee employee)
+		{
+			employee.Location = employee.GetLocation(employee.JobTitle);
+			Console.WriteLine(employee.JobTitle, employee.Location);
+		}
+
+		public void ChangeJobTitle(string jobTitle)
+		{
+			JobTitle = jobTitle;
+		}
+
+
     }
 }

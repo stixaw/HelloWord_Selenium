@@ -6,7 +6,7 @@ namespace UnitTestProject
     [TestClass]
     public class EmployeeTests
     {
-        Employee emp1 = new Employee("John", "Smoth", 2);
+        Employee emp1 = new Employee("John", "Smoth", 2, "Manager");
 
         [TestMethod]
         public void Employee_GetName_Successful()
@@ -53,6 +53,32 @@ namespace UnitTestProject
 
 			//Assert
 			Assert.IsNotNull(result);
+		}
+
+		[TestMethod]
+		public void Employee_LocationMatchesJobTitle_Success()
+		{
+
+			//Act
+			var location = emp1.GetLocation(emp1.JobTitle);
+			Console.WriteLine(location);
+
+			//Assert
+			Assert.AreEqual(location, "Springfield");
+		}
+
+		[TestMethod]
+		public void Employee_LocationChangesWithJobChange_Success()
+		{
+			//Arrange
+			emp1.ChangeJobTitle("Engineer");
+
+			//Act
+			var location = emp1.GetLocation(emp1.JobTitle);
+			Console.WriteLine(location);
+
+			//Assert
+			Assert.AreNotEqual(location, "Springfield");
 		}
     }
 }
