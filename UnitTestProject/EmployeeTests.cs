@@ -6,7 +6,17 @@ namespace UnitTestProject
     [TestClass]
     public class EmployeeTests
     {
-        Employee emp1 = new Employee("John", "Smoth", 2, "Manager");
+		Employee emp1;
+
+		[TestInitialize]
+		public void SetUp()
+		{
+			Employee emp1 = new Employee("John", "Smoth", 2, (JobTitle)2);
+			if (emp1.JobTitle != JobTitle.Manager)
+			{
+				Console.WriteLine("I am an employee");
+			}
+		}
 
         [TestMethod]
         public void Employee_GetName_Successful()

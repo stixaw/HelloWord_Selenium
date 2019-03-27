@@ -1,19 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UnitTestProject
 {
-    class Employee
+	public enum JobTitle
+	{
+		Manager = 1,
+		Engineer = 2,
+		CodeMonkey = 3
+	}
+
+	public class Employee
     {
 
         public int EmployeeId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime DateOfHire { get; set; }
-		public string JobTitle { get; set; }
+		public JobTitle JobTitle { get; set; }
         public string Location { get; set; }
         public double Salary { get; set; }
 
@@ -24,8 +27,11 @@ namespace UnitTestProject
 			DateOfHire = DateTime.Now;
 		}
 
-        public Employee(string firstName, string lastName, int id, string jobTitle)
+        public Employee(string firstName, string lastName, int id, JobTitle jobTitle)
         {
+			//Enum.GetName(typeof(JobTitle), jobTitle);
+			//int x = (int)jobTitle;
+			//JobTitle y = (JobTitle)x;
             
             FirstName = firstName;
             LastName = lastName;
@@ -56,19 +62,19 @@ namespace UnitTestProject
             Salary = _salary;
         }
 
-		public string GetLocation(string jobTitle)
+		public string GetLocation(JobTitle jobTitle)
 		{
 			string location;
 
 			switch (jobTitle)
 			{
-				case "Manager":
+				case JobTitle.Manager:
 					location = "Springfield";
 					break;
-				case "CSuite":
+				case JobTitle.CodeMonkey:
 					location = "NYC";
 					break;
-				case "Engineer":
+				case JobTitle.Engineer:
 					location = "Denver";
 					break;
 				default:
@@ -82,10 +88,10 @@ namespace UnitTestProject
 		public void AddLocation(Employee employee)
 		{
 			employee.Location = employee.GetLocation(employee.JobTitle);
-			Console.WriteLine(employee.JobTitle, employee.Location);
+			Console.WriteLine(employee.JobTitle.ToString(), employee.Location);
 		}
 
-		public void ChangeJobTitle(string jobTitle)
+		public void ChangeJobTitle(JobTitle jobTitle)
 		{
 			JobTitle = jobTitle;
 		}
@@ -93,3 +99,5 @@ namespace UnitTestProject
 
     }
 }
+//Every Class inherits from the object class allowing us to use
+//	Equals, Finalize, GetHashCode, ToString
